@@ -1,4 +1,6 @@
-It is impossible to run `pulp docs` or `pulp publish` on this simple project.
+It is impossible to run `pulp docs` or `pulp publish` on this simple project, even though `pulp build` is successful. This package forces docs typechecking by providing a declaration without a type. Indeed, giving a type to `main` prevents the error, but that just masks an underlying problem.
+
+Issue created: https://github.com/purescript/purescript/issues/3264
 
 The error is related to... `newtype deriving` in `Quickcheck.Gen` for `Gen`:
 
